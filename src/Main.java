@@ -11,7 +11,7 @@ public class Main {
         for(int x = 0; x < coreCount; x++){
             threads[x] = new Threading(x);
         }
-        for (int n = 1; n < 5000; n++) {
+        for (int n = 1; n < 10000; n++) {
             threads[n%coreCount].addToWork(new Point(n,n+1));
         }
 
@@ -29,7 +29,7 @@ public class Main {
         }
 
         for (Point p : result) {
-            System.out.println("Works with n = " + p.x + " and k = " + p.y);
+            System.out.println("Works with n = " + p.x + " and n+1 = " + p.y);
         }
 
 
